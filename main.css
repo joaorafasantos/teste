@@ -1,0 +1,46 @@
+.carousel-container {
+    position: relative;
+    width: 600px; /* Ajuste a largura conforme necessário */
+    height: 400px; /* Ajuste a altura conforme necessário */
+    overflow: hidden; /* Esconde as imagens que estão fora da área visível */
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Inicialmente todos os slides estão invisíveis */
+    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave de opacidade */
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o slide sem distorcer */
+  }
+  
+  .carousel-slide.active {
+    opacity: 1; /* O slide ativo fica visível */
+  }
+  
+  .carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Garante que os botões fiquem acima das imagens */
+  }
+  
+  .carousel-prev {
+    left: 10px;
+  }
+  
+  .carousel-next {
+    right: 10px;
+  }
